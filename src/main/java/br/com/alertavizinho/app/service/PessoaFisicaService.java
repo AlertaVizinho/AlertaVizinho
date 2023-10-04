@@ -29,7 +29,7 @@ public class PessoaFisicaService {
     public Page<PessoaFisicaDto> listarTodos(Pageable paginacao) {
         return repository
                 .findAll(paginacao)
-                .map(id -> modelMapper.map(id, PessoaFisicaDto.class))
+                .map(id -> modelMapper.map(id, PessoaFisicaDto.class));
     }
 
     public PessoaFisicaDto ListarPorId(Long id) {
